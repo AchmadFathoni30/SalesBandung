@@ -18,6 +18,7 @@ func SetupRouter() *gin.Engine {
 	authorized := r.Group("/SalesBandung", BasicAuthMiddleware())
 	{
 		authorized.GET("/Saleshdr", controller.GetSalesHDR)
+		authorized.GET("/Salespayment", controller.GetSalesPAYMENT)
 	}
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"status": "OK"})
