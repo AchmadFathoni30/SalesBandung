@@ -10,5 +10,5 @@ func main() {
 	config.ConnectDb()
 
 	r := router.SetupRouter()
-	log.Fatal(r.Run(":8080"))
+	log.Fatal(r.Run(":3030"))
 }
